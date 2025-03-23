@@ -1,0 +1,250 @@
+:root {
+  --background-color: #eee;
+  --text-color: #333;
+}
+
+body {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f4f8;
+  font-family: Geneva, Tahoma, Arial, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  user-select: none;
+}
+
+::backdrop {
+  background-color: #f0f4f8;
+}
+
+header, footer {
+  background-color: #333;
+  color: #ccc;
+  padding: 0.5em;
+  min-height: 1em;
+  display: flex;
+  align-items: center;
+}
+
+header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+main {
+  flex: 1;
+  padding: 20px;
+  overflow: auto;
+}
+footer {
+  box-shadow: 0 -3px 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* navigation in main (only first child visible) */
+main > * {
+  display: none;
+}
+main > *:first-child {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
+
+button, input[type="submit"] {
+  cursor: pointer;
+  background-color: #333;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+button.special {
+  background-color: #645;
+}
+button:hover, input[type="submit"]:hover {
+  background-color: #454;
+}
+button.small, input[type="submit"].small {
+  font-size: 90%;
+  padding:0.5em;
+  margin:0px;
+}
+
+a, a:visited {
+  cursor: pointer;
+  color: #359;
+}
+
+.link {
+  cursor: pointer;
+}
+.link:hover {
+  filter: brightness(1.1);
+}
+.link.special {
+  color: #645;
+}
+
+.copy-btn {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.copy-btn:before {
+  content: "📋";
+}
+.copy-btn:hover {
+  color: #457;
+}
+.copy-btn:active {
+  color: #56b;
+}
+
+/* header components */
+header>*:first-child {
+  flex: 1;
+}
+#userInfo {
+  font-size: small;
+}
+
+/* footer components */
+footer * {
+  flex: 1;
+  font-size: small;
+}
+#infoCenter {
+  text-align: center;
+}
+#infoRight {
+  text-align: right;
+}
+
+/* specific items in main */
+#userProfile img {
+  border-radius: 15%;
+}
+
+#instructorExamsList {
+  display: grid;
+  grid-template-columns: repeat(8, auto);
+}
+#instructorExamsList > * {
+  display: contents;
+}
+#instructorExamsList > * > * {
+  padding: 0.5em;
+}
+#instructorExamsList > *:hover > * {
+  background-color: rgba(200,200,200,0.5);
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-container .tooltip-text {
+  visibility: hidden;
+  width: 150px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position above the icon */
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.submission-table {
+  font-size: 80%;
+}
+.submission-table img {
+  max-width: 2em;
+  max-height: 2em;
+}
+.submission-table>*>*:nth-child(3),
+.submission-table>*>*:nth-child(7),
+.submission-table>*>*:nth-child(8){
+  text-align: center;
+}
+
+.submissions-table {
+  font-size: 90%;
+}
+.submissions-table>*>*:nth-child(6),
+.submissions-table>*>*:nth-child(7),
+.submissions-table>*>*:nth-child(8){
+  text-align: center;
+}
+
+
+.submission-table > * > * {
+  max-height: 20em; 
+  overflow: auto;
+  /* transition: height 2s ease-in; */
+}
+/* .submission-table.grid > *:not(.header):hover > * {
+  max-height: fit-content;
+  height: fit-content;
+  transition: 2s ease-in;
+} */
+
+
+.fa-check { color: green; }
+.fa-xmark, .fa-minus, .fa-unlock { color:red; }
+.fa-circle-exclamation { color: purple; }
+
+.header .fa-check, 
+.header .fa-xmark, 
+.header .fa-minus,
+.header .fa-circle-exclamation {
+  color: #ccc;
+  font-size: 80%;
+}
+
+.fa-xmark.choicecolor{
+  color:#0f4d94;
+  font-size:15px; 
+}
+
+#all-options span:has(textarea) {
+  flex-direction: column;
+}
+
+
+.qbuilder {
+  border: rgb(0, 0, 0) solid 0px;
+  border-radius: 8px;
+  padding: 10px;
+}
+.gen-div {
+  background-color: #bee3db;
+}
+
+.options-div {
+  background-color: #ffd6ba;
+}
+
+.answers-div{
+  background-color: #89b0ae;
+}

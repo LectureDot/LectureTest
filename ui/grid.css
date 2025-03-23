@@ -1,0 +1,28 @@
+
+.grid {
+  --cols: 2;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), auto);
+}
+.grid > * {
+  display: contents;
+}
+
+.grid > * > * {
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  background-color: #eee;
+  min-height: 100%;
+}
+.grid > *:nth-child(even):not(.header) > *{
+  background-color: #ddd;
+}
+.grid > .header > * {
+  background-color: #444;
+  color: #eee;
+  padding: 0.3em;
+}
+
+.grid > *:not(.header):hover > * {
+  background-color: #bbb;
+}

@@ -1,0 +1,14 @@
+#toast {
+  z-index: 99999;
+}
+
+#toast.slide-up {
+  animation: toastSlideUp .2s linear forwards;
+}
+
+@keyframes toastSlideUp {
+  100%{
+    transform: translate(-50% , 0%);
+  }
+}
+

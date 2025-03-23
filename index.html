@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <title>LectureTest</title>
+</head>
+<body>
+  <header>
+    <span class="link" onclick="location.hash='#home';location.reload()">Lecture<b>Test</b></span>
+    <span></span>
+    <span id="userInfo" class="link"></span>
+  </header>
+  <main>
+    <div id="default">
+      <p>Welcome to Lecture<b>Test</b>.</p>
+      <p>Please <a href="#!" id="signInBtn">sign in</a> to continue.</p>
+    </div>
+    <div id="home">
+      <div>
+        <p>
+          Welcome <span id="name"></span>.
+          <br>
+          <small>If this is not you, click email on top-right to sign out or change your profile information.</small>
+        </p>
+        <p>
+          Please enter exam id and passcode to start an exam...
+        </p>
+      </div>
+      <form id="examInfoForm">
+        <label>
+          Exam ID:<br>
+          <input id="examId" required value="8bjvW6DvbMz0kYa8wAWP">
+        </label>
+        <br>
+        <label>
+          Exam passcode:<br>
+          <input id="examPasscode" required>
+        </label>
+        <br>
+        <input type="submit" value="Start Exam"></input>
+      </form>
+      <div>
+        <p>
+          You got this. <span style="cursor:pointer;display:inline-block;transition:transform 0.4s" onclick="const e=this;e.style.transform='scale(2)';setTimeout(()=>e.style.transform='scale(1)',400)">👊🏽</span>
+        </p>
+      </div>
+    </div>
+    <div id="user">
+      <div>
+        <button id="userBackBtn"><i class="fa-solid fa-left-long"></i> Back</button>
+        <div id="userProfile"></div>
+        <form id="userInfoForm">
+          <label>
+            First Name:<br>
+            <input id="firstName" required>
+          </label>
+          <br>
+          <label>
+            Last Name:<br>
+            <input id="lastName" required>
+          </label>
+          <br>
+          <input type="submit" value="Save"></input>
+          <button id="signoutBtn" class="special">Sign out</button>
+        </form>
+      </div>
+    </div>
+    <div id="instructions">
+      <div>
+        <div id="instructionContent"></div>
+        <p>
+          Click Proceed when ready.
+        </p>
+        <p>
+          Good luck!
+        </p>
+      </div>
+      <button id="proceedBtn">Proceed to exam...</button>
+    </div>
+    <div id="questions"></div>
+    <div id="results"></div>
+    <div id="instructorView">
+      <form id="examSearchForm">
+        <input placeholder="Search exam by name" id="examSearchInput">
+        <button class="small"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+      <button id="createNewExamBtn">Create new exam</button>
+      <div id="instructorExamsList"></div>
+    </div>
+    <div id="instructorExamView"></div>
+    <div id="instructorSubmissionView"></div>
+  </main>
+  <footer>
+    <div id="infoLeft"></div>
+    <div id="infoCenter"></div>
+    <div id="infoRight"></div>
+  </footer>
+</body>
+<script src="main.js" type="module"></script>
+</html>

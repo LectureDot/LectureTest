@@ -1,0 +1,126 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+} 
+
+.container {
+    display: flex;
+    gap: 20px;
+} */
+
+/*
+.class1.class2 - selects item that has both class1 and class2
+div.class1
+div.class1.class2
+div[lang]
+div[lang="en"]
+div[lang="en"].class1
+<div lang="en" class="class1 class2"></div>
+
+.class1 .class2 - selects item that has class2 inside another item that has class1
+<div class="class1">
+  <div>
+    <div class="class2"></div>
+  </div>
+</div>
+
+.class1 > .class2 - selects item that has class2 that is a direct child of another item that has class1
+<div class="class1">
+    <div class="class2"></div>
+</div>
+
+*/
+
+
+.column {
+    /* width: 300px; */
+    min-height: 400px;
+    border: 2px solid #ccc;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    overflow-y: auto;
+}
+
+.column.right{
+    flex-grow: 1;
+    font-weight: bold;
+}
+
+.code {
+    width: 75%;
+    border: 0px solid rgb(0, 4, 244);
+    min-height: 400px;
+    background-color: #ffffff;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.item {
+    padding: 2px;
+    margin: 5px 0;
+    background-color: #ddd;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    cursor: move;
+    display: flex;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+.item > span {
+    white-space: pre-wrap;
+}
+
+.right {
+    padding: 0px;
+}
+.right .item {
+    background-color: rgba(255,255,255,0.2);
+    border: none;
+    border-bottom: solid 1px #ccc;
+    border-radius: 0;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 5px;
+}
+.right .item .icon-btn:nth-child(2) {
+    margin-right: 14px;
+}
+
+.indented {
+    padding-left: 20px;
+    border-left: 2px dotted #aaa;
+}
+
+.item.dragging {
+    opacity: 0.5;
+}
+
+.column.droppable {
+    border: 2px solid #aaa;
+}
+
+.icon-btn {
+    cursor: default;
+    font-size: 150%;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.icon-btn:not(.transparent):hover {
+    cursor: pointer;
+    color: rgb(105, 107, 229);
+}
+
+.indent-control.transparent {
+  opacity: 0.1;
+}

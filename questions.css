@@ -1,0 +1,226 @@
+.card-container {
+  font-family: Arial;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-content: center;
+  gap: 20px; /* Space between cards */
+}
+
+.choices-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  position: relative;
+  border: 1px solid #ddd;
+  overflow: hidden; /* Ensure content doesn't overflow rounded corners */
+  width: 800px; /* Adjust card width as needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  display: grid; /* Use flexbox for cells */
+  grid-template-columns: 1fr 1fr;
+  background-color: #f4f3ee;
+  border-radius: 5px;
+  min-height: 200px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  transition: transform 0.2s;
+  text-align: left;
+}
+
+.cell {
+  flex: 1; /* Distribute available space equally */
+  padding: 15px; /* Add padding to cell content */
+  box-sizing: border-box; /* Include padding in cell width */
+  overflow-y: auto;
+}
+
+.cell:first-child {
+  border-right: 1px solid #eee; /* Vertical divider */
+}
+
+/* Optional styling for cell content */
+.cell h3 {
+  margin-top: 0;
+}
+
+.cell p {
+  margin-bottom: 0;
+}
+
+.cell img {
+  max-width: 100%;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.card-title {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.choices-container label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.choices-container label span {
+  margin-left: 8px;
+}
+
+
+
+button:hover {
+  background-color: #45a049;
+}
+
+.question-prompt {
+  max-width: '100%';
+  min-width: '100%';
+  overflow: 'auto';
+  overflow-y:auto;
+  height: '100%';
+  display: 'flex';
+  flex-direction: 'column';
+  justify-content: 'center';
+  align-items: 'center';
+  border-right: 1px solid #545252;
+}
+
+.answer-prompt {
+  overflow: 'auto';
+  height: '100%';
+  display: 'flex';
+  flex-grow: 1;
+  justify-content: 'center';
+  align-items: 'center';
+}
+
+.button {
+  background-color: #023204;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  color: white;
+  padding: 20px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  background-color: #4CAF50;
+  margin-top: 30px;
+}
+
+#editor {
+  height: 90vh;
+  border: 1px solid #ddd;
+  margin: 20px;
+}
+
+.toolbar {
+  padding: 10px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+select {
+  padding: 5px;
+}
+
+/* .CodeMirror pre.CodeMirror-line, .CodeMirror pre.CodeMirror-line-like {
+  padding: 0 40px;
+} */
+
+.span-2 {
+  grid-column: span 2;
+}
+.card:has(.span-2) > :first-child {
+  grid-column: span 2;
+}
+
+.card-points {
+  font-size: 70%;
+  position: absolute;
+  top: 0em;
+  left: 1em;
+  background-color: rgba(100,100,100,0.25);
+  padding: 0.25em;
+}
+
+.question-instructions {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+
+
+/*test hover*/
+.hover-container {
+  position: relative;
+ /* width: 200px;
+  height: 150px;*/
+ /* background-color: lightgray;*/
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.hover-container:hover {
+  background-color: #d8cbb9;
+}
+
+.icon-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s;
+}
+
+.hover-container:hover .icon-container {
+  visibility: visible;
+  opacity: 1;
+}
+
+.icon {
+  font-size: 50px;
+  color: red;
+  cursor: pointer;
+}
+
+
+/* quiz builder */
+/* .quizbuilder-card {
+  position: relative;
+}
+.quizbuilder-card:after {
+  content: "Click to edit";
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100px;
+  height: 100px;
+} */
+
+.choices-container label span p {
+  display: contents;
+}
+
+.missing-answer {
+  border:solid 3px red;
+}
