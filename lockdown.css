@@ -4,6 +4,8 @@ body {
 
 .hidden {
   display: none !important;
+  position: fixed;
+  top: 100vh;
 }
 
 .lockdown-modal {

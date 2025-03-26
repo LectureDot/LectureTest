@@ -15,8 +15,8 @@ body {
 } */
 
 /*
-.class1.class2 - selects item that has both class1 and class2
-div.class1
+.class1.class2 - selects item that has both class1 and class2 //// className:'class1 class2'
+div.class1  
 div.class1.class2
 div[lang]
 div[lang="en"]
@@ -32,8 +32,15 @@ div[lang="en"].class1
 
 .class1 > .class2 - selects item that has class2 that is a direct child of another item that has class1
 <div class="class1">
-    <div class="class2"></div>
+<div class="class2"></div>
 </div>
+
+.class1 > * > *  - selects any item that is a direct grandchild of another item that has class1
+
+input:nth-child(3):hover:not(.class1)
+
+#myelement 
+<div id="myelement">
 
 */
 

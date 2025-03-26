@@ -43,12 +43,12 @@
       </div>
       <form id="examInfoForm">
         <label>
-          Exam ID:<br>
-          <input id="examId" required value="8bjvW6DvbMz0kYa8wAWP">
+          Exam ID:
+          <input id="examId" required>
         </label>
         <br>
         <label>
-          Exam passcode:<br>
+          Exam passcode:
           <input id="examPasscode" required>
         </label>
         <br>
@@ -84,13 +84,14 @@
       <div>
         <div id="instructionContent"></div>
         <p>
-          Click Proceed when ready.
+          Click Proceed when ready. &nbsp; <input id="ldc" type="password" class="hidden small">
         </p>
         <p>
           Good luck!
         </p>
       </div>
       <button id="proceedBtn">Proceed to exam...</button>
+      <br>
     </div>
     <div id="questions"></div>
     <div id="results"></div>

@@ -80,6 +80,18 @@ button.small, input[type="submit"].small {
   margin:0px;
 }
 
+input.small {
+  font-size: 50%;
+  width: 7em;
+  font-family: 'Courier New', Courier, monospace;
+  vertical-align: bottom;
+}
+.bottom-right {
+  position: absolute;
+  bottom: 2em;
+  right: 1.5em;
+}
+
 a, a:visited {
   cursor: pointer;
   color: #359;
@@ -214,16 +226,13 @@ footer * {
 .fa-xmark, .fa-minus, .fa-unlock { color:red; }
 .fa-circle-exclamation { color: purple; }
 
-.header .fa-check, 
-.header .fa-xmark, 
-.header .fa-minus,
-.header .fa-circle-exclamation {
+.header .fa-solid {
   color: #ccc;
   font-size: 80%;
 }
 
 .fa-xmark.choicecolor{
-  color:#0f4d94;
+  color:#87bbf6;
   font-size:15px; 
 }
 
@@ -233,24 +242,48 @@ footer * {
 
 
 .qbuilder {
+  display: flex;
+  flex-direction: column;
   border: rgb(0, 0, 0) solid 0px;
   border-radius: 8px;
   padding: 10px;
+  gap: 10px;
+  color: #e4e6eb;
 }
 .gen-div {
-  background-color: #bee3db;
+  background-color: #5a5c5e;
 }
 
 .options-div {
-  background-color: #ffd6ba;
+  background-color: #5a5c5e;
 }
 
 .answers-div{
-  background-color: #89b0ae;
+  display: flex;
+  flex-direction: row;
+  background-color: #5a5c5e;
+}
+
+.back{
+  background-color: #e4e6eb;
 }
 
 .mcq {
   flex-direction: column;
+}
+
+.qouter {
+  border: rgb(0, 0, 0) solid 0px;
+  border-radius: 8px;
+  padding: 12px;
+  background-color: rgb(190, 188, 187);
+}
+
+.readonly {
+  border: rgb(0, 0, 0) solid 0px;
+  border-radius: 8px;
+  padding: 12px;
+  background-color: rgb(250, 174, 159);
 }
 
 .loader {
@@ -265,4 +298,3 @@ footer * {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-  

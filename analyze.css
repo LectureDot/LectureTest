@@ -1,0 +1,88 @@
+.container {
+  background-color: rgb(59, 57, 69);
+  color: #f4f7ff;
+}
+
+.bg {
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgb(21, 19, 29);
+}
+
+.qtype {
+  border: rgb(0, 0, 0) solid 0px;
+  border-radius: 8px;
+  padding: 60px;
+  background-color: rgb(43, 37, 32);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #d5dae9;
+  width: 400px;
+  height: 200px;
+  font-size: x-large;
+}
+
+ /* Container for dropdown */
+ .dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Button with hamburger icon */
+.dropdown-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  background-color: rgba(255,255,255,0.7);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  min-width: 200px;
+  display: none;
+  z-index: 1000;
+  white-space: nowrap;
+}
+
+/* Checkbox options */
+.dropdown-menu label {
+  display: flex;
+  align-items: center;
+  padding: 6px 10px;
+  cursor: pointer;
+  color:rgb(0, 8, 255);
+}
+
+.dropdown-menu input {
+  margin-right: 8px;
+}
+
+/* Show dropdown when open */
+.dropdown-container.open .dropdown-menu {
+  display: block;
+}
