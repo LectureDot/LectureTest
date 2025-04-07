@@ -17,21 +17,36 @@
   gap: 10px;
   padding: 10px;
   border-radius: 8px;
+  height: 125%;
   background-color: rgb(21, 19, 29);
 }
 
 .qtype {
   border: rgb(0, 0, 0) solid 0px;
   border-radius: 8px;
-  padding: 60px;
+  padding: 40px;
+  padding-top: 20px;
   background-color: rgb(43, 37, 32);
   display: flex;
   flex-direction: column;
   gap: 10px;
   color: #d5dae9;
   width: 400px;
-  height: 200px;
+  height: 300px;
   font-size: x-large;
+}
+
+.report {
+  border: rgb(0, 0, 0) solid 0px;
+  border-radius: 8px;
+  padding: 1em;
+  background-color: #ccc;
+  text-align: left;
+  gap: 10px;
+  color: #222;
+  width: 945px; 
+  height: 2000px;
+  font-size: medium;
 }
 
  /* Container for dropdown */
@@ -85,4 +100,63 @@
 /* Show dropdown when open */
 .dropdown-container.open .dropdown-menu {
   display: block;
+}
+
+/* Slider Selector  */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 36px;
+  height: 20px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #9e9e9e;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+input:checked + .slider {
+  background-color: #4285F4;
+}
+
+input:checked + .slider:before {
+  transform: translateX(16px);
+}
+
+.toggle-label {
+  margin-left: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #d6cfcf;
 }

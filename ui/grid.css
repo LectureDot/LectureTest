@@ -12,6 +12,8 @@
   padding-left: 0.25em;
   padding-right: 0.25em;
   background-color: #eee;
+}
+.grid > *:not(.header) > * {
   min-height: 100%;
 }
 .grid > *:nth-child(even):not(.header) > *{
@@ -20,7 +22,36 @@
 .grid > .header > * {
   background-color: #444;
   color: #eee;
-  padding: 0.3em;
+  padding: 0.5em;
+  position: sticky;
+  top: 0px;
+  overflow: hidden;
+  cursor: pointer;
+  /* cursor: url('data:image/svg+xml;utf8,<svg version="1.1" viewBox="0.0 0.0 50.0 100.0" fill="none" stroke="none" stroke-linecap="square" stroke-miterlimit="10" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><clipPath id="p.0"><path d="m0 0l960.0 0l0 720.0l-960.0 0l0 -720.0z" clip-rule="nonzero"/></clipPath><g clip-path="url(#p.0)"><path fill="#000000" fill-opacity="0.0" d="m0 0l960.0 0l0 720.0l-960.0 0z" fill-rule="evenodd"/><path fill="#ffffff" d="m1.031496 8.020997l6.929134 -6.9291334l6.929134 6.9291334l-3.4645672 0l0 24.535435l-6.929134 0l0 -24.535435z" fill-rule="evenodd"/><path stroke="#000000" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="butt" d="m1.031496 8.020997l6.929134 -6.9291334l6.929134 6.9291334l-3.4645672 0l0 24.535435l-6.929134 0l0 -24.535435z" fill-rule="evenodd"/><path fill="#ffffff" d="m24.884514 38.73491l-6.9291325 6.9291344l-6.9291344 -6.9291344l3.4645662 0l0 -24.535435l6.9291334 0l0 24.535435z" fill-rule="evenodd"/><path stroke="#000000" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="butt" d="m24.884514 38.73491l-6.9291325 6.9291344l-6.9291344 -6.9291344l3.4645662 0l0 -24.535435l6.9291334 0l0 24.535435z" fill-rule="evenodd"/></g></svg>'), s-resize; */
+  /* cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black"><text x="0" y="14" font-size="16">↑↓</text></svg>') 0 14, pointer; */
+}
+.grid > .header > *:after { /* ensure no gap is visible */
+  content: '';
+  border: solid 2px #444;
+  position: absolute;
+  top: 0px;
+  right: -1px;
+  height: 98%;
+}
+.grid > .header > *:before { /* ensure no gap is visible */
+  content: '';
+  border: solid 2px #444;
+  position: absolute;
+  top: 0px;
+  left: -1px;
+  height: 98%;
+}
+.grid > .header > *:hover:before {
+  content: "↑↓";
+  font-size: 8px;
+  vertical-align: top;
+  position: absolute;
+  left: 0px;
 }
 
 .grid > *:not(.header):hover > * {

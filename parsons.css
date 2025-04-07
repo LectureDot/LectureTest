@@ -116,18 +116,9 @@ h2 {
     border: 2px solid #aaa;
 }
 
-.icon-btn {
-    cursor: default;
+.item .icon-btn {
     font-size: 150%;
-    margin-right: 0px;
-    margin-left: 0px;
 }
-
-.icon-btn:not(.transparent):hover {
-    cursor: pointer;
-    color: rgb(105, 107, 229);
-}
-
 .indent-control.transparent {
   opacity: 0.1;
 }

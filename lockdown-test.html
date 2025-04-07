@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <title>LectureTest</title>
+</head>
+<body>
+  <header>
+    <span class="left"></span>
+    <span class="center"></span>
+    <span class="right"></span>
+  </header>
+  <main>
+  </main>
+  <footer>
+    <span class="left"></span>
+    <span class="center"></span>
+    <span class="right"></span>
+  </footer>
+</body>
+<script type="module">
+  import { lockdown, lockdownStop } from './lockdown.js';
+  lockdown({
+      onStart: ()=>{
+        const main = document.querySelector('main');
+        main.innerHTML = `<div>
+          <p>Your lockdown mode seems to be working.</p>
+          <button id="backBtn" onclick="history.back()"><i class="fa-solid fa-left-long"></i> Back</button>
+        </div>`;
+      },
+      maxUnlock: 10,
+      disablePasscode: 'test'
+    });
+
+</script>
+</html>

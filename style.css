@@ -71,13 +71,19 @@ button, input[type="submit"] {
 button.special {
   background-color: #645;
 }
-button:hover, input[type="submit"]:hover {
-  background-color: #454;
+button:hover:not(:disabled), input[type="submit"]:hover:not(:disabled) {
+  background-color: #45a049;
+}
+button.special:hover:not(:disabled) {
+  background-color: red;
 }
 button.small, input[type="submit"].small {
   font-size: 90%;
   padding:0.5em;
   margin:0px;
+}
+button:disabled {
+  opacity: 0.5;
 }
 
 input.small {
@@ -146,7 +152,7 @@ footer * {
   border-radius: 15%;
 }
 
-#instructorExamsList {
+/* #instructorExamsList {
   display: grid;
   grid-template-columns: repeat(8, auto);
 }
@@ -158,7 +164,7 @@ footer * {
 }
 #instructorExamsList > *:hover > * {
   background-color: rgba(200,200,200,0.5);
-}
+} */
 
 .tooltip-container {
   position: relative;
@@ -194,21 +200,29 @@ footer * {
   max-width: 2em;
   max-height: 2em;
 }
+.submission-table>*>*:nth-child(1),
 .submission-table>*>*:nth-child(3),
 .submission-table>*>*:nth-child(7),
 .submission-table>*>*:nth-child(8){
   text-align: center;
 }
 
+
 .submissions-table {
   font-size: 90%;
 }
+.submission-table>*>*:nth-child(1),
 .submissions-table>*>*:nth-child(6),
 .submissions-table>*>*:nth-child(7),
-.submissions-table>*>*:nth-child(8){
+.submissions-table>*>*:nth-child(8),
+.submissions-table>*>*:nth-child(9),
+.submissions-table>*>*:nth-child(10),
+.submissions-table>*>*:nth-child(11){
   text-align: center;
 }
-
+.submissions-table>*>*:nth-child(2){
+  text-align: right;
+}
 
 .submission-table > * > * {
   max-height: 20em; 
@@ -221,10 +235,29 @@ footer * {
   transition: 2s ease-in;
 } */
 
+.icon-btn {
+  cursor: default;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.icon-btn:not(.transparent):hover {
+  cursor: pointer;
 
+  transform: scale(1.1);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
 .fa-check { color: green; }
 .fa-xmark, .fa-minus, .fa-unlock { color:red; }
 .fa-circle-exclamation { color: purple; }
+
+.icon-btn.bigger{
+  font-size:25px;
+  margin-right:5px;
+  margin-left:5px;
+}
+.icon-btn.transparent {
+  opacity: 0.1;
+}
 
 .header .fa-solid {
   color: #ccc;
@@ -297,4 +330,13 @@ footer * {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.purple {
+  color:#c39;
+}
+
+.question-changed:after {
+  content: "*";
+  color: red;
 }

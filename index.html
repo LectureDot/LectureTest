@@ -59,6 +59,9 @@
           You got this. <span style="cursor:pointer;display:inline-block;transition:transform 0.4s" onclick="const e=this;e.style.transform='scale(2)';setTimeout(()=>e.style.transform='scale(1)',400)">👊🏽</span>
         </p>
       </div>
+      <p style="border-top:solid 1px gray;">
+        Click <a href="lockdown-test.html">here</a> to check if lockdown mode will work on your machine.
+      </p>
     </div>
     <div id="user">
       <div>
@@ -99,6 +102,7 @@
       <form id="examSearchForm">
         <input placeholder="Search exam by name" id="examSearchInput">
         <button class="small"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="small" id="reloadExamsBtn"><i class="fa-solid fa-rotate"></i></button>
       </form>
       <button id="createNewExamBtn">Create new exam</button>
       <div id="instructorExamsList"></div>
