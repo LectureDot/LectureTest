@@ -59,7 +59,7 @@ button, input[type="submit"] {
   background-color: #333;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 10px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -111,6 +111,10 @@ a, a:visited {
 }
 .link.special {
   color: #645;
+}
+
+:focus-visible:not(input):not(.link):not(a):not(.icon-btn) {
+  outline: none;
 }
 
 .copy-btn {
@@ -170,7 +174,6 @@ footer * {
   position: relative;
   display: inline-block;
 }
-
 .tooltip-container .tooltip-text {
   visibility: hidden;
   width: 150px;
@@ -187,7 +190,6 @@ footer * {
   opacity: 0;
   transition: opacity 0.3s;
 }
-
 .tooltip-container:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
@@ -239,16 +241,17 @@ footer * {
   cursor: default;
   margin-right: 0px;
   margin-left: 0px;
+  border-radius: 2px;
 }
 .icon-btn:not(.transparent):hover {
   cursor: pointer;
-
   transform: scale(1.1);
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 .fa-check { color: green; }
 .fa-xmark, .fa-minus, .fa-unlock { color:red; }
 .fa-circle-exclamation { color: purple; }
+.fa-trash-can {color: #a44}
 
 .icon-btn.bigger{
   font-size:25px;
@@ -257,6 +260,14 @@ footer * {
 }
 .icon-btn.transparent {
   opacity: 0.1;
+}
+.icon-btn.grayscale {
+  background-color: #333;
+  color: #ccc;
+  margin: 2px;
+  padding: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .header .fa-solid {
@@ -274,50 +285,7 @@ footer * {
 }
 
 
-.qbuilder {
-  display: flex;
-  flex-direction: column;
-  border: rgb(0, 0, 0) solid 0px;
-  border-radius: 8px;
-  padding: 10px;
-  gap: 10px;
-  color: #e4e6eb;
-}
-.gen-div {
-  background-color: #5a5c5e;
-}
 
-.options-div {
-  background-color: #5a5c5e;
-}
-
-.answers-div{
-  display: flex;
-  flex-direction: row;
-  background-color: #5a5c5e;
-}
-
-.back{
-  background-color: #e4e6eb;
-}
-
-.mcq {
-  flex-direction: column;
-}
-
-.qouter {
-  border: rgb(0, 0, 0) solid 0px;
-  border-radius: 8px;
-  padding: 12px;
-  background-color: rgb(190, 188, 187);
-}
-
-.readonly {
-  border: rgb(0, 0, 0) solid 0px;
-  border-radius: 8px;
-  padding: 12px;
-  background-color: rgb(250, 174, 159);
-}
 
 .loader {
   border: 16px solid white;
@@ -339,4 +307,11 @@ footer * {
 .question-changed:after {
   content: "*";
   color: red;
+}
+
+.bigger {
+  font-size: 110%;
+}
+.bigger>* {
+  font-size: 100%;
 }

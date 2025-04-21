@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page not found</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 90vh;
+      font-size: 16pt;
+      font-family: Cambria;
+    }
+  </style>
+</head>
+<body>
+  <div>😔<br><br>Sorry, page not found.</div>
+</body>
+<script>
+  var path=location.pathname.split('/');
+  if(path.length>1){
+    if(!path.at(-1))path.pop();
+    path.pop();
+    path=path.join('/')||'/';
+  }
+  if(path!==location.pathname)location=path;
+</script>
+</html>
