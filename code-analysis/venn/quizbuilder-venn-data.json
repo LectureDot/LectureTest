@@ -1,0 +1,104 @@
+[
+  {
+    "sets": [
+      "CSS"
+    ],
+    "size": 53,
+    "classes": [
+      "bg",
+      "row",
+      "qtype",
+      "report",
+      "dropdown-container",
+      "dropdown-btn",
+      "dropdown-menu",
+      "toggle-container",
+      "toggle-switch",
+      "slider",
+      "toggle-label",
+      "hidden",
+      "lockdown-modal",
+      "column",
+      "code",
+      "item",
+      "right",
+      "indented",
+      "indent-control",
+      "card-container",
+      "choices-container",
+      "card",
+      "cell",
+      "card-title",
+      "question-prompt",
+      "answer-prompt",
+      "button",
+      "toolbar",
+      "span-2",
+      "card-points",
+      "question-instructions",
+      "hover-container",
+      "icon",
+      "missing-answer",
+      "qouter",
+      "readonly",
+      "bottom-right",
+      "link",
+      "copy-btn",
+      "tooltip-container",
+      "tooltip-text",
+      "submission-table",
+      "submissions-table",
+      "fa-check",
+      "fa-minus",
+      "fa-unlock",
+      "fa-circle-exclamation",
+      "header",
+      "loader",
+      "purple",
+      "question-changed",
+      "grid",
+      "modal"
+    ]
+  },
+  {
+    "sets": [
+      "Used"
+    ],
+    "size": 9,
+    "classes": [
+      "fa-plus",
+      "fa-save",
+      "fa-door-closed",
+      "fa-pen-to-square",
+      "answerChoice",
+      "fa-angle-up",
+      "fa-angle-down",
+      "choicecolor",
+      "transparent"
+    ]
+  },
+  {
+    "sets": [
+      "CSS",
+      "Used"
+    ],
+    "size": 15,
+    "classes": [
+      "container",
+      "icon-btn",
+      "icon-container",
+      "qbuilder",
+      "gen-div",
+      "options-div",
+      "answers-div",
+      "back",
+      "mcq",
+      "builder-control-row",
+      "question-edit-button",
+      "fa-xmark",
+      "fa-trash-can",
+      "fa-solid",
+      "bigger"
+    ]
+  }
+]

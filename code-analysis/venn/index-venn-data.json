@@ -1,0 +1,100 @@
+[
+  {
+    "sets": [
+      "CSS"
+    ],
+    "size": 64,
+    "classes": [
+      "container",
+      "bg",
+      "row",
+      "qtype",
+      "report",
+      "dropdown-container",
+      "dropdown-btn",
+      "dropdown-menu",
+      "toggle-container",
+      "toggle-switch",
+      "slider",
+      "toggle-label",
+      "lockdown-modal",
+      "column",
+      "code",
+      "item",
+      "right",
+      "icon-btn",
+      "indented",
+      "indent-control",
+      "card-container",
+      "choices-container",
+      "card",
+      "cell",
+      "card-title",
+      "question-prompt",
+      "answer-prompt",
+      "button",
+      "toolbar",
+      "span-2",
+      "card-points",
+      "question-instructions",
+      "hover-container",
+      "icon-container",
+      "icon",
+      "missing-answer",
+      "qbuilder",
+      "gen-div",
+      "options-div",
+      "answers-div",
+      "back",
+      "mcq",
+      "qouter",
+      "readonly",
+      "builder-control-row",
+      "question-edit-button",
+      "bottom-right",
+      "copy-btn",
+      "tooltip-container",
+      "tooltip-text",
+      "submission-table",
+      "submissions-table",
+      "fa-check",
+      "fa-xmark",
+      "fa-minus",
+      "fa-unlock",
+      "fa-circle-exclamation",
+      "fa-trash-can",
+      "header",
+      "purple",
+      "question-changed",
+      "bigger",
+      "grid",
+      "modal"
+    ]
+  },
+  {
+    "sets": [
+      "Used"
+    ],
+    "size": 5,
+    "classes": [
+      "fa-left-long",
+      "special",
+      "small",
+      "fa-magnifying-glass",
+      "fa-rotate"
+    ]
+  },
+  {
+    "sets": [
+      "CSS",
+      "Used"
+    ],
+    "size": 4,
+    "classes": [
+      "hidden",
+      "link",
+      "fa-solid",
+      "loader"
+    ]
+  }
+]

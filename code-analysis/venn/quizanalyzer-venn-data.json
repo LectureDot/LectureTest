@@ -1,0 +1,96 @@
+[
+  {
+    "sets": [
+      "CSS"
+    ],
+    "size": 61,
+    "classes": [
+      "container",
+      "toggle-container",
+      "toggle-switch",
+      "slider",
+      "toggle-label",
+      "hidden",
+      "lockdown-modal",
+      "column",
+      "code",
+      "item",
+      "right",
+      "icon-btn",
+      "indented",
+      "indent-control",
+      "card-container",
+      "choices-container",
+      "card",
+      "cell",
+      "card-title",
+      "question-prompt",
+      "answer-prompt",
+      "button",
+      "toolbar",
+      "span-2",
+      "card-points",
+      "question-instructions",
+      "hover-container",
+      "icon-container",
+      "icon",
+      "missing-answer",
+      "qbuilder",
+      "gen-div",
+      "options-div",
+      "answers-div",
+      "back",
+      "mcq",
+      "qouter",
+      "readonly",
+      "builder-control-row",
+      "question-edit-button",
+      "bottom-right",
+      "link",
+      "copy-btn",
+      "tooltip-container",
+      "tooltip-text",
+      "submission-table",
+      "submissions-table",
+      "fa-check",
+      "fa-xmark",
+      "fa-minus",
+      "fa-unlock",
+      "fa-circle-exclamation",
+      "fa-trash-can",
+      "header",
+      "fa-solid",
+      "loader",
+      "purple",
+      "question-changed",
+      "bigger",
+      "grid",
+      "modal"
+    ]
+  },
+  {
+    "sets": [
+      "Used"
+    ],
+    "size": 1,
+    "classes": [
+      "open"
+    ]
+  },
+  {
+    "sets": [
+      "CSS",
+      "Used"
+    ],
+    "size": 7,
+    "classes": [
+      "bg",
+      "row",
+      "qtype",
+      "report",
+      "dropdown-container",
+      "dropdown-btn",
+      "dropdown-menu"
+    ]
+  }
+]

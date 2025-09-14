@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Venn Diagram Viewer</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://unpkg.com/venn.js@0.2.20/venn.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    #venn { width: 800px; margin: auto; }
+    button { margin: 10px; padding: 10px 20px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h1>Class Viewer</h1>
+  <div id="four-columns" style="display: flex; gap: 2rem; font-family: sans-serif;">
+    <div id="css-only" style="flex: 3;">
+      <h3>CSS Only</h3>
+      <div id="css-columns" style="display: flex; gap: 1rem;"></div>
+    </div>
+    <div id="overlap-only" style="flex: 1;">
+      <h3>CSS/JS Overlap</h3>
+      <div id="overlap" style="display: flex; flex-direction: column;"></div>
+    </div>
+    <div id="js-only" style="flex: 1;">
+      <h3>JS Only</h3>
+      <div id="js-columns" style="display: flex; flex-direction: column;"></div>
+    </div>
+    <div id="fa-overlap" style="flex: 1;">
+      <h3>Font Awesome Overlap</h3>
+      <div id="fa-columns" style="display: flex; flex-direction: column;"></div>
+    </div>
+  </div>
+  
+   
+  <div id="file-info" style="margin-bottom: 10px; font-weight: bold;"></div>
+  <div>
+    <button onclick="prevFile()">⬅️ Previous</button>
+    <button onclick="nextFile()">➡️ Next</button>
+  </div>
+
+  <script>
+  const fileInfo = document.getElementById("file-info");
+
+  let dataFiles = [];
+  let currentIndex = 0;
+
+  async function getFontAwesomeClasses(url = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css") {
+    const response = await fetch(url);
+    const cssText = await response.text();
+
+    // Use regex to find all classes (e.g., .fa-home, .fas, etc.)
+    const classRegex = /\.fa[a-z0-9\-]+(?=\s*[{,])/g;
+    const matches = new Set();
+
+    let match;
+    while ((match = classRegex.exec(cssText)) !== null) {
+      matches.add(match[0].slice(1)); // Remove the leading dot
+    }
+
+    return Array.from(matches).sort();
+  }
+
+  function loadVennData(file) {
+    fetch(file)
+      .then(res => res.json())
+      .then(data => {
+      
+    const labelGroups = {
+      cssOnly: [],
+      jsOnly: [],
+      overlap: [],
+      faOverlap: []
+    };
+
+    // Divide the data into cssOnly, usedOnly, and overlap
+    data.forEach(set => {
+      if (set.sets.length === 2) {
+        labelGroups.overlap.push(...(set.classes || []));
+      } else if (set.sets[0] === "CSS") {
+        labelGroups.cssOnly.push(...(set.classes || []));
+      } else if (set.sets[0] === "Used") {
+        labelGroups.jsOnly.push(...(set.classes || []));        
+      }
+    });
+    const fontAwesomeOverlap = labelGroups.jsOnly.filter(cls => fontAwesomeClasses.includes(cls));
+    labelGroups.faOverlap.push(...(fontAwesomeOverlap || []));
+    labelGroups.jsOnly = labelGroups.jsOnly.filter(cls => !fontAwesomeOverlap.includes(cls));
+
+  function renderFourColumns(cssOnly, overlap, jsOnly, fontAwesomeOverlap) {
+    const renderList = (selector, items, color, columnCount = 1) => {
+    const container = d3.select(selector);
+    container.selectAll("*").remove();
+
+    // Sort items alphabetically
+    items.sort((a, b) => a.localeCompare(b));
+
+    if (columnCount === 1) {
+      items.forEach(item => {
+        container.append("div")
+          .text(item.length > 20 ? item.slice(0, 20) + "..." : item)
+          .style("margin", "4px 0")
+          .style("color", color);
+      });
+    } else {
+      const columns = Array.from({ length: columnCount }, () => []);
+      items.forEach((item, i) => {
+        columns[i % columnCount].push(item);
+      });
+
+      columns.forEach(colItems => {
+        const col = container.append("div").style("flex", "1");
+        colItems.forEach(item => {
+          col.append("div")
+            .text(item.length > 20 ? item.slice(0, 20) + "..." : item)
+            .style("margin", "4px 0")
+            .style("color", color);
+        });
+      });
+    }
+  };
+
+  renderList("#css-columns", cssOnly, "blue", 3);
+  renderList("#overlap", overlap, "red", 1);
+  renderList("#js-columns", jsOnly, "green", 1);
+  renderList("#fa-columns", fontAwesomeOverlap, "purple", 1);
+}
+
+    renderFourColumns(labelGroups.cssOnly, labelGroups.overlap, labelGroups.jsOnly, labelGroups.faOverlap);
+
+
+        // Show file info
+        const fileName = file.split('/').pop().replace('-venn-data.json', '');
+        fileInfo.textContent = `Diagram Source: ${fileName}.js`;
+      })
+      .catch(err => console.error("Error loading JSON:", err));
+  }
+
+  function nextFile() {
+    currentIndex = (currentIndex + 1) % dataFiles.length;
+    loadVennData(dataFiles[currentIndex]);
+  }
+
+  function prevFile() {
+    currentIndex = (currentIndex - 1 + dataFiles.length) % dataFiles.length;
+    loadVennData(dataFiles[currentIndex]);
+  }
+  var fontAwesomeClasses = [];
+  
+  async function init (){
+    fontAwesomeClasses = await getFontAwesomeClasses();
+
+  fetch("venn/index.json")
+    .then(res => res.json())
+    .then(files => {
+      dataFiles = files.map(f => `venn/${f}`);
+      loadVennData(dataFiles[currentIndex]);
+    })
+    .catch(err => console.error("Error loading file list:", err));
+  }
+  init();
+</script>
+
+</body>
+</html>
+
