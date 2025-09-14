@@ -27,3 +27,17 @@ body {
   padding: 2em;
 }
 
+.lockdown-modal > footer {
+  padding: 2em;
+  color: gray;
+  white-space: pre;
+  text-align: left;
+  font-family: 'Courier New', Courier, monospace;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  border-radius: 1em;
+  background-color: transparent;
+  font-size: 80%;
+}
+

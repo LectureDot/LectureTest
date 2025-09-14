@@ -98,6 +98,10 @@ input.small {
   right: 1.5em;
 }
 
+.small:not(button):not(input) {
+  font-size: 80%;
+}
+
 a, a:visited {
   cursor: pointer;
   color: #359;
@@ -314,4 +318,20 @@ footer * {
 }
 .bigger>* {
   font-size: 100%;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  align-items: center;
+}
+
+.code-output {
+  white-space: pre-wrap;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 90%;
+  background-color: #222;
+  color: #ccc;
+  padding: 0.25em;
 }
