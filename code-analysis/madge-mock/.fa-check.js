@@ -1,1 +1,0 @@
-// CSS class: .fa-check (used)

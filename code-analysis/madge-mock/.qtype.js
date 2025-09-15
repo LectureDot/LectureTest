@@ -1,1 +1,0 @@
-// CSS class: .qtype (used)

@@ -1,1 +1,0 @@
-// CSS class: .fa-trash-can (used)
