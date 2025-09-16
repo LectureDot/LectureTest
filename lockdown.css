@@ -30,7 +30,7 @@ body {
 .lockdown-modal > footer {
   padding: 2em;
   color: gray;
-  white-space: pre;
+  /* white-space: pre; */
   text-align: left;
   font-family: 'Courier New', Courier, monospace;
   position: absolute;
