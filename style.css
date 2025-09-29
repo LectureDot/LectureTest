@@ -346,6 +346,8 @@ footer * {
   background-color: #222;
   color: #ccc;
   padding: 0.25em;
+  max-height: 10em;
+  overflow-y: auto;
 }
 
 .grader-student-answer {
