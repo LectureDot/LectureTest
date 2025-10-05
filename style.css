@@ -339,6 +339,12 @@ footer * {
   align-items: center;
 }
 
+.top-right {
+  position:absolute;
+  top: 0.25em;
+  right: 0.25em;
+}
+
 .code-output {
   white-space: pre-wrap;
   font-family: 'Courier New', Courier, monospace;
