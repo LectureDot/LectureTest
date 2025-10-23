@@ -1,0 +1,7 @@
+.CodeMirror {
+  /* This allows the user to resize the element */
+  resize: both;
+  /* This is the key change: set overflow to 'hidden' 
+     to suppress the wrapper's scrollbars */
+  overflow: hidden;
+}
