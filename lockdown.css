@@ -41,3 +41,16 @@ body {
   font-size: 80%;
 }
 
+.lockdown-mouse-warning {
+  position: fixed;
+  left: 1em;
+  right: 1em;
+  bottom: 1em;
+  font-size: large;
+  color: #ccc;
+  border-radius: 3px;
+  background-color: #333;
+  border: solid 0.5px gray;
+  padding: 0.25em 2em;
+  text-align: center;
+}

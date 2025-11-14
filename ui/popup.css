@@ -11,6 +11,9 @@
   justify-content: center;
   align-items: center;
 }
+.modal > * > h3 {
+  margin:0;
+}
 .modal > * {
   background-color: #eee;
   color: #333;

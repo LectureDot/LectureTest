@@ -1,0 +1,27 @@
+
+.menu {
+  position: fixed;
+  z-index: 2000;
+  /* max-width: 200px; */
+  max-height: 90vh;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+  background-color: inherit;
+  color: inherit;
+  /* border: solid 1px gray; */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.menu > * {
+  padding: 0.5em;
+  width: 100% !important;
+  display: flex;
+  flex-direction:row;
+  align-items:center;
+  gap: 0.5em;
+}
+.menu > *.clickable:hover {
+  background-color: var(--hover-bg-color);
+  color: var(--hover-font-color);
+}
