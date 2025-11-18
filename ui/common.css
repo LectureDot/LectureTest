@@ -19,4 +19,5 @@ label {
   width: min(80% , 300px);
   height: 1px;
   margin: 1.5em 0 1em 0;
+  place-self: center;
 }
