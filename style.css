@@ -122,6 +122,9 @@ code {
 pre code {
   display: block;
 }
+pre {
+  margin:0.25em;
+}
 
 .link {
   cursor: pointer;
@@ -339,7 +342,14 @@ footer * {
 .flex-row {
   display: flex;
   flex-direction: row;
-  gap: 1em;
+  gap: 0.5em;
+  align-items: center;
+}
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 0.5em;
   align-items: center;
 }
 
@@ -357,6 +367,7 @@ footer * {
   color: #ccc;
   padding: 0.25em;
   max-height: 10em;
+  min-height: fit-content;
   overflow-y: auto;
 }
 
