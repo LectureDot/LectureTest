@@ -3,6 +3,19 @@
 All notable changes to the "LectureTest" web app will be documented in this file.
 
 
+### [0.1.2] - 2024-11-21
+
+#### Fixed
+
+- reread from regular expression (better handling of special regex chars)
+- unicode regular expression testing
+- removed some questionable reread patterns
+
+#### Added
+
+- more reread text patterns
+
+
 ### [0.1.1] - 2024-11-19
 
 #### Fixed
