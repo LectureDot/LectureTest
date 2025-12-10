@@ -23,8 +23,14 @@
   background-color: #5a5c5e;
 }
 
-.back{
-  background-color: #e4e6eb;
+#question-editing-form{
+  background-color: rgb(59, 57, 69);
+  color: #f4f7ff;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .mcq {

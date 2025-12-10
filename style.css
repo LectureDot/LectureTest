@@ -355,8 +355,8 @@ footer * {
 
 .top-right {
   position:absolute;
-  top: 0.25em;
-  right: 0.25em;
+  top: 0em;
+  right: 0em;
 }
 
 .code-output {

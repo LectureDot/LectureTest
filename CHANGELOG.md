@@ -3,6 +3,13 @@
 All notable changes to the "LectureTest" web app will be documented in this file.
 
 
+### [0.1.3] - 2024-12-10
+
+#### Added
+
+- new version of reread (no more reliance on rr, only re, better future-proofing)
+
+
 ### [0.1.2] - 2024-11-21
 
 #### Fixed
