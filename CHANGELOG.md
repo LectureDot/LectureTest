@@ -3,14 +3,24 @@
 All notable changes to the "LectureTest" web app will be documented in this file.
 
 
-### [0.1.3] - 2024-12-10
+
+### [0.1.4] - 2026-01-26
+
+#### Added
+
+- Import/Export test json
+- Download .zip of all student submissions
+- Resize of test question cards
+
+
+### [0.1.3] - 2025-12-10
 
 #### Added
 
 - new version of reread (no more reliance on rr, only re, better future-proofing)
 
 
-### [0.1.2] - 2024-11-21
+### [0.1.2] - 2025-11-21
 
 #### Fixed
 
@@ -23,7 +33,7 @@ All notable changes to the "LectureTest" web app will be documented in this file
 - more reread text patterns
 
 
-### [0.1.1] - 2024-11-19
+### [0.1.1] - 2025-11-19
 
 #### Fixed
 

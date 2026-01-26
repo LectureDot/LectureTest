@@ -60,6 +60,9 @@
   align-items:center;
   background-color: inherit;
   width: 100%;
-  gap: 1em;
+  gap: 5px;
+}
+.builder-control-row > button {
+  font-size: 80%;
 }
 

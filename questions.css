@@ -7,6 +7,7 @@
   justify-content: center; 
   align-content: center;
   gap: 20px; /* Space between cards */
+  align-items: center;
 }
 
 .choices-container {
@@ -19,7 +20,8 @@
   position: relative;
   border: 1px solid #ddd;
   overflow: hidden; /* Ensure content doesn't overflow rounded corners */
-  width: 800px; /* Adjust card width as needed */
+  width: 800px;
+  resize: both; /* Adjust card width as needed */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
   display: grid; /* Use flexbox for cells */
   grid-template-columns: 1fr 1fr;
