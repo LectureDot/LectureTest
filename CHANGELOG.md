@@ -3,6 +3,17 @@
 All notable changes to the "LectureTest" web app will be documented in this file.
 
 
+### [0.1.5] - 2026-02-10
+
+#### Added
+
+- Extra credit allowed.
+- Added ability to add prefix and postfix and template code patterns to CODE questions.
+
+#### Fixed
+
+- Fixed bug where coding questions with no answers were auto-graded. 
+
 
 ### [0.1.4] - 2026-01-26
 

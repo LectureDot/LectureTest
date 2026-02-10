@@ -1,4 +1,4 @@
-.card-container {
+.question-cards-container {
   font-family: Arial;
   width: 100%;
   display: flex;
@@ -16,7 +16,7 @@
   flex-direction: column;
 }
 
-.card {
+.question-card {
   position: relative;
   border: 1px solid #ddd;
   overflow: hidden; /* Ensure content doesn't overflow rounded corners */
@@ -30,7 +30,6 @@
   min-height: 200px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
-  transition: transform 0.2s;
   text-align: left;
 }
 
@@ -58,11 +57,7 @@
   max-width: 100%;
 }
 
-.card:hover {
-  transform: translateY(-2px);
-}
-
-.card-title {
+.question-card-title {
   margin-top: 20px;
   font-size: 1.2rem;
   font-weight: bold;
@@ -140,11 +135,11 @@ select {
 .span-2 {
   grid-column: span 2;
 }
-.card:has(.span-2) > :first-child {
+.question-card:has(.span-2) > :first-child {
   grid-column: span 2;
 }
 
-.card-points {
+.question-card-points {
   font-size: 70%;
   position: absolute;
   top: 0em;
@@ -200,20 +195,6 @@ select {
   cursor: pointer;
 }
 
-
-/* quiz builder */
-/* .quizbuilder-card {
-  position: relative;
-}
-.quizbuilder-card:after {
-  content: "Click to edit";
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100px;
-  height: 100px;
-} */
 
 .choices-container label span p {
   display: contents;
