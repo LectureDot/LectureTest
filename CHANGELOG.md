@@ -3,6 +3,13 @@
 All notable changes to the "LectureTest" web app will be documented in this file.
 
 
+### [0.1.6] - 2026-02-17
+
+#### Fixed
+
+- Minor bug fixes. 
+
+
 ### [0.1.5] - 2026-02-10
 
 #### Added
