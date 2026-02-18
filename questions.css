@@ -20,7 +20,9 @@
   position: relative;
   border: 1px solid #ddd;
   overflow: hidden; /* Ensure content doesn't overflow rounded corners */
-  width: 800px;
+  width: 90%;
+  height: 55vh;
+  max-height: fit-content;
   resize: both; /* Adjust card width as needed */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
   display: grid; /* Use flexbox for cells */
@@ -98,7 +100,7 @@
   align-items: 'center';
 }
 
-.button {
+/* .button {
   background-color: #023204;
   font-family: Arial, Helvetica, sans-serif;
   font-size: large;
@@ -110,7 +112,7 @@
   transition: background-color 0.2s;
   background-color: #4CAF50;
   margin-top: 30px;
-}
+} */
 
 #editor {
   height: 90vh;

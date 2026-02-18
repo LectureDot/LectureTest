@@ -56,6 +56,9 @@ main > *:first-child {
   min-height: 100%;
 }
 
+input[type="range"] {
+  accent-color: #45a049;
+}
 
 button, input[type="submit"] {
   cursor: pointer;
@@ -385,3 +388,5 @@ footer * {
   font-size:80%;
   padding: 2px 1em;
 }
+
+
