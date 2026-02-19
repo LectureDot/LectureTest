@@ -129,6 +129,26 @@ pre {
   margin:0.25em;
 }
 
+
+details summary {
+  cursor: pointer;
+}
+details {
+  interpolate-size: allow-keywords;
+  overflow: hidden;
+}
+details::details-content {
+  block-size: 0;
+  transition:
+		block-size 0.3s,
+		content-visibility 0.3s;
+  transition-behavior: allow-discrete;
+}
+details[open]::details-content {
+	block-size: auto;
+}
+
+
 .link {
   cursor: pointer;
 }
@@ -390,3 +410,19 @@ footer * {
 }
 
 
+#examInstructions {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 80%;
+  border-radius: 3px;
+  padding: 1em;
+  margin-bottom: 1em;
+  overflow: auto;
+  max-height: fit-content;
+}
+
+#questions {
+  justify-content: start;
+}
+#examTitle {
+  margin-top: 0;
+}

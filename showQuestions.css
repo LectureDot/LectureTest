@@ -205,3 +205,24 @@ select {
 .missing-answer {
   border:solid 3px red;
 }
+
+.question-pager {
+  display: grid;
+  grid-template-areas: 'prev current-question next' 'prev slider next';
+  place-items: center;
+  gap: 0;
+}
+.question-pager-prev-btn {
+  grid-area: prev;
+  margin-right: 1em;
+}
+.question-pager-next-btn {
+  grid-area: next;
+  margin-left: 1em;
+}
+.question-pager-current-question {
+  grid-area: current-question;
+}
+.question-pager-slider {
+  grid-area: slider;
+}
