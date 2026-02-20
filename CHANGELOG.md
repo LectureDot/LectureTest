@@ -3,6 +3,18 @@
 All notable changes to the "LectureTest" web app will be documented in this file.
 
 
+### [0.1.7] - 2026-02-19
+
+#### Added
+
+- Ability to force one-at-a-time question presentation, and accompanying navigation.
+
+#### Fixed
+
+- Answers refreshed from DB when exam is being edited.
+- Other minor bug fixes. 
+
+
 ### [0.1.6] - 2026-02-17
 
 #### Fixed
