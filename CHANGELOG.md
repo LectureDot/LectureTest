@@ -3,6 +3,15 @@
 All notable changes to the "LectureTest" web app will be documented in this file.
 
 
+
+### [0.1.8] - 2026-02-20
+
+#### Added
+
+- Warning for instructors when exiting exam editing mode without saving changes.
+- Better control styling/functionality in exam editing mode.
+
+
 ### [0.1.7] - 2026-02-19
 
 #### Added

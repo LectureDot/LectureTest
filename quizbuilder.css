@@ -66,3 +66,19 @@
   font-size: 80%;
 }
 
+.quiz-builder-question-frame {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  gap: 1em;
+  scroll-margin-top: 7em;
+}
+
+.quiz-builder-question-side-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  align-items: center;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+}
