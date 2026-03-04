@@ -3,6 +3,12 @@
 All notable changes to the "LectureTest" web app will be documented in this file.
 
 
+### [0.1.9] - 2026-03-04
+
+#### Fixed
+
+- Copy-paste keyboard shortcuts no longer overwritten for instructors.
+
 
 ### [0.1.8] - 2026-02-20
 
