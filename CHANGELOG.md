@@ -5,9 +5,15 @@ All notable changes to the "LectureTest" web app will be documented in this file
 
 ### [0.1.9] - 2026-03-04
 
+#### Added
+
+- Ability to copy unit test output to expected output text pattern in unit test editing.
+
 #### Fixed
 
 - Copy-paste keyboard shortcuts no longer overwritten for instructors.
+- Removed unused options in unit test and text pattern editing popups.
+- Minor interaction fixes in quiz grader.
 
 
 ### [0.1.8] - 2026-02-20
