@@ -3,6 +3,13 @@
 All notable changes to the "LectureTest" web app will be documented in this file.
 
 
+### [0.1.10] - 2026-03-13
+
+#### Fixed
+
+- Exam editing inconsistency fixed for multiple choice answer views.
+
+
 ### [0.1.9] - 2026-03-04
 
 #### Added
