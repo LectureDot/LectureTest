@@ -3,6 +3,17 @@
 All notable changes to the "LectureTest" web app will be documented in this file.
 
 
+### [0.1.11] - 2026-03-30
+
+#### Added
+
+- Given score for each question that was auto-graded as 0 is set to be 0 by default in the grading UI.
+
+#### Fixed
+
+- Height of code output height settings adjusted to allow scroll.
+
+
 ### [0.1.10] - 2026-03-13
 
 #### Fixed
