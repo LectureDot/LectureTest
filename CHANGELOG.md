@@ -3,6 +3,14 @@
 All notable changes to the "LectureTest" web app will be documented in this file.
 
 
+### [0.2.2] - 2026-04-24
+
+#### Fixed
+
+- Delete section functionality fixed.
+- Other small fixes in quiz builder.
+
+
 ### [0.2.1] - 2026-04-24
 
 #### Added

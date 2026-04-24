@@ -100,8 +100,13 @@ input[type="submit"].small {
   margin: 0px;
 }
 
+button:focus-visible {
+  outline: 2px solid green;
+}
+
 button:disabled {
   opacity: 0.5;
+  cursor: default;
 }
 
 input[type="number"] {
@@ -181,7 +186,7 @@ details[open]::details-content {
   color: #645;
 }
 
-:focus-visible:not(input):not(.link):not(a):not(.icon-btn) {
+:focus-visible:not(input):not(button):not(.link):not(a):not(.icon-btn) {
   outline: none;
 }
 
