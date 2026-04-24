@@ -3,6 +3,22 @@
 All notable changes to the "LectureTest" web app will be documented in this file.
 
 
+### [0.2.1] - 2026-04-24
+
+#### Added
+
+- Added support for multiple sections in exams.
+  - Options to copy and move questions between sections.
+  - Options to have individual section instructions.
+  - Moved question-order randomization options from exam level to section level.
+- Better instructions and AI instructions for importing questions.
+
+#### Fixed
+
+- Height of code output allowed to exceed original max-height.
+- Fixed issues with importing different question types with correct answer conversions.
+
+
 ### [0.1.11] - 2026-03-30
 
 #### Added
