@@ -51,10 +51,16 @@
   background-color: rgb(250, 174, 159);
 }
 
-.builder-control-row {
+
+.sticky-controls {
   position: sticky;
   top: -20px;
-  z-index: 1;
+  z-index: 10;
+  background-color: inherit;
+  width: 100%;
+}
+
+.builder-control-row {
   display: flex;
   justify-content: center;
   align-items: center;

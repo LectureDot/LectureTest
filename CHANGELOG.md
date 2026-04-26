@@ -3,6 +3,19 @@
 All notable changes to the "LectureTest" web app will be documented in this file.
 
 
+### [0.2.3] - 2026-04-26
+
+#### Added
+
+- Added ability to copy to another exam.
+- Added ability to copy/move all questions in a section.
+
+#### Fixed
+
+- Fixed Copy/Move bug where wrong section indices were used.
+- Fixed bug where deleting a question from a section didn't update the section in the UI.
+
+
 ### [0.2.2] - 2026-04-24
 
 #### Fixed
